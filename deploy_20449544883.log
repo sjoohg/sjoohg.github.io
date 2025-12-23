@@ -1,0 +1,273 @@
+build-and-deploy	Set up job	﻿2025-12-23T02:26:05.8280982Z Current runner version: '2.330.0'
+build-and-deploy	Set up job	2025-12-23T02:26:05.8305863Z ##[group]Runner Image Provisioner
+build-and-deploy	Set up job	2025-12-23T02:26:05.8306846Z Hosted Compute Agent
+build-and-deploy	Set up job	2025-12-23T02:26:05.8307436Z Version: 20251211.462
+build-and-deploy	Set up job	2025-12-23T02:26:05.8308045Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+build-and-deploy	Set up job	2025-12-23T02:26:05.8308721Z Build Date: 2025-12-11T16:28:49Z
+build-and-deploy	Set up job	2025-12-23T02:26:05.8309375Z Worker ID: {3668f682-9a8f-4498-a816-018ed2af6543}
+build-and-deploy	Set up job	2025-12-23T02:26:05.8310100Z ##[endgroup]
+build-and-deploy	Set up job	2025-12-23T02:26:05.8310585Z ##[group]Operating System
+build-and-deploy	Set up job	2025-12-23T02:26:05.8311184Z Ubuntu
+build-and-deploy	Set up job	2025-12-23T02:26:05.8311632Z 24.04.3
+build-and-deploy	Set up job	2025-12-23T02:26:05.8312082Z LTS
+build-and-deploy	Set up job	2025-12-23T02:26:05.8312487Z ##[endgroup]
+build-and-deploy	Set up job	2025-12-23T02:26:05.8313080Z ##[group]Runner Image
+build-and-deploy	Set up job	2025-12-23T02:26:05.8313606Z Image: ubuntu-24.04
+build-and-deploy	Set up job	2025-12-23T02:26:05.8314126Z Version: 20251215.174.1
+build-and-deploy	Set up job	2025-12-23T02:26:05.8315198Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+build-and-deploy	Set up job	2025-12-23T02:26:05.8316777Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+build-and-deploy	Set up job	2025-12-23T02:26:05.8318051Z ##[endgroup]
+build-and-deploy	Set up job	2025-12-23T02:26:05.8318981Z ##[group]GITHUB_TOKEN Permissions
+build-and-deploy	Set up job	2025-12-23T02:26:05.8321000Z Metadata: read
+build-and-deploy	Set up job	2025-12-23T02:26:05.8321560Z Pages: write
+build-and-deploy	Set up job	2025-12-23T02:26:05.8322002Z ##[endgroup]
+build-and-deploy	Set up job	2025-12-23T02:26:05.8324043Z Secret source: Actions
+build-and-deploy	Set up job	2025-12-23T02:26:05.8324690Z Prepare workflow directory
+build-and-deploy	Set up job	2025-12-23T02:26:05.8641417Z Prepare all required actions
+build-and-deploy	Set up job	2025-12-23T02:26:05.8678082Z Getting action download info
+build-and-deploy	Set up job	2025-12-23T02:26:06.3583211Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build-and-deploy	Set up job	2025-12-23T02:26:06.4701363Z Download action repository 'actions/configure-pages@v3' (SHA:b8130d9ab958b325bbde9786d62f2c97a9885a0e)
+build-and-deploy	Set up job	2025-12-23T02:26:07.0213380Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build-and-deploy	Set up job	2025-12-23T02:26:07.1097331Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+build-and-deploy	Set up job	2025-12-23T02:26:07.5161678Z Download action repository 'actions/deploy-pages@v4' (SHA:d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e)
+build-and-deploy	Set up job	2025-12-23T02:26:08.1948506Z Getting action download info
+build-and-deploy	Set up job	2025-12-23T02:26:08.3663877Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build-and-deploy	Set up job	2025-12-23T02:26:08.5038886Z Complete job name: build-and-deploy
+build-and-deploy	Checkout	﻿2025-12-23T02:26:08.5671801Z ##[group]Run actions/checkout@v4
+build-and-deploy	Checkout	2025-12-23T02:26:08.5672435Z with:
+build-and-deploy	Checkout	2025-12-23T02:26:08.5672679Z   repository: sjoohg/sjoohg.github.io
+build-and-deploy	Checkout	2025-12-23T02:26:08.5673142Z   token: ***
+build-and-deploy	Checkout	2025-12-23T02:26:08.5673358Z   ssh-strict: true
+build-and-deploy	Checkout	2025-12-23T02:26:08.5673567Z   ssh-user: git
+build-and-deploy	Checkout	2025-12-23T02:26:08.5673790Z   persist-credentials: true
+build-and-deploy	Checkout	2025-12-23T02:26:08.5674039Z   clean: true
+build-and-deploy	Checkout	2025-12-23T02:26:08.5674265Z   sparse-checkout-cone-mode: true
+build-and-deploy	Checkout	2025-12-23T02:26:08.5674530Z   fetch-depth: 1
+build-and-deploy	Checkout	2025-12-23T02:26:08.5674741Z   fetch-tags: false
+build-and-deploy	Checkout	2025-12-23T02:26:08.5674977Z   show-progress: true
+build-and-deploy	Checkout	2025-12-23T02:26:08.5675212Z   lfs: false
+build-and-deploy	Checkout	2025-12-23T02:26:08.5675417Z   submodules: false
+build-and-deploy	Checkout	2025-12-23T02:26:08.5675645Z   set-safe-directory: true
+build-and-deploy	Checkout	2025-12-23T02:26:08.5676072Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:08.6728391Z Syncing repository: sjoohg/sjoohg.github.io
+build-and-deploy	Checkout	2025-12-23T02:26:08.6729754Z ##[group]Getting Git version info
+build-and-deploy	Checkout	2025-12-23T02:26:08.6730205Z Working directory is '/home/runner/work/sjoohg.github.io/sjoohg.github.io'
+build-and-deploy	Checkout	2025-12-23T02:26:08.6730871Z [command]/usr/bin/git version
+build-and-deploy	Checkout	2025-12-23T02:26:08.6855685Z git version 2.52.0
+build-and-deploy	Checkout	2025-12-23T02:26:08.6881539Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:08.6897594Z Temporarily overriding HOME='/home/runner/work/_temp/dd97c2eb-4efe-48a6-9e92-d47ef9c9e2ea' before making global git config changes
+build-and-deploy	Checkout	2025-12-23T02:26:08.6899043Z Adding repository directory to the temporary git global config as a safe directory
+build-and-deploy	Checkout	2025-12-23T02:26:08.6911130Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sjoohg.github.io/sjoohg.github.io
+build-and-deploy	Checkout	2025-12-23T02:26:08.6955254Z Deleting the contents of '/home/runner/work/sjoohg.github.io/sjoohg.github.io'
+build-and-deploy	Checkout	2025-12-23T02:26:08.6958698Z ##[group]Initializing the repository
+build-and-deploy	Checkout	2025-12-23T02:26:08.6962698Z [command]/usr/bin/git init /home/runner/work/sjoohg.github.io/sjoohg.github.io
+build-and-deploy	Checkout	2025-12-23T02:26:08.7086552Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-and-deploy	Checkout	2025-12-23T02:26:08.7087234Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build-and-deploy	Checkout	2025-12-23T02:26:08.7087835Z hint: to use in all of your new repositories, which will suppress this warning,
+build-and-deploy	Checkout	2025-12-23T02:26:08.7088284Z hint: call:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7088513Z hint:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7088879Z hint: 	git config --global init.defaultBranch <name>
+build-and-deploy	Checkout	2025-12-23T02:26:08.7089248Z hint:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7089614Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-and-deploy	Checkout	2025-12-23T02:26:08.7090197Z hint: 'development'. The just-created branch can be renamed via this command:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7090651Z hint:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7090908Z hint: 	git branch -m <name>
+build-and-deploy	Checkout	2025-12-23T02:26:08.7091276Z hint:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7091883Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-and-deploy	Checkout	2025-12-23T02:26:08.7092821Z Initialized empty Git repository in /home/runner/work/sjoohg.github.io/sjoohg.github.io/.git/
+build-and-deploy	Checkout	2025-12-23T02:26:08.7102767Z [command]/usr/bin/git remote add origin https://github.com/sjoohg/sjoohg.github.io
+build-and-deploy	Checkout	2025-12-23T02:26:08.7138528Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:08.7139243Z ##[group]Disabling automatic garbage collection
+build-and-deploy	Checkout	2025-12-23T02:26:08.7143535Z [command]/usr/bin/git config --local gc.auto 0
+build-and-deploy	Checkout	2025-12-23T02:26:08.7171145Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:08.7171863Z ##[group]Setting up auth
+build-and-deploy	Checkout	2025-12-23T02:26:08.7178844Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-deploy	Checkout	2025-12-23T02:26:08.7208663Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-deploy	Checkout	2025-12-23T02:26:08.7572908Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-deploy	Checkout	2025-12-23T02:26:08.7601212Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-deploy	Checkout	2025-12-23T02:26:08.7819057Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-deploy	Checkout	2025-12-23T02:26:08.7850303Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-deploy	Checkout	2025-12-23T02:26:08.8078527Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-and-deploy	Checkout	2025-12-23T02:26:08.8114359Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:08.8115156Z ##[group]Fetching the repository
+build-and-deploy	Checkout	2025-12-23T02:26:08.8123346Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9dee7c1997186423d95642894ef994449f23f60e:refs/remotes/origin/main
+build-and-deploy	Checkout	2025-12-23T02:26:09.1799416Z From https://github.com/sjoohg/sjoohg.github.io
+build-and-deploy	Checkout	2025-12-23T02:26:09.1800002Z  * [new ref]         9dee7c1997186423d95642894ef994449f23f60e -> origin/main
+build-and-deploy	Checkout	2025-12-23T02:26:09.1830826Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:09.1831580Z ##[group]Determining the checkout info
+build-and-deploy	Checkout	2025-12-23T02:26:09.1834130Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:09.1839671Z [command]/usr/bin/git sparse-checkout disable
+build-and-deploy	Checkout	2025-12-23T02:26:09.1880118Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-and-deploy	Checkout	2025-12-23T02:26:09.1905367Z ##[group]Checking out the ref
+build-and-deploy	Checkout	2025-12-23T02:26:09.1910687Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build-and-deploy	Checkout	2025-12-23T02:26:09.1969149Z Switched to a new branch 'main'
+build-and-deploy	Checkout	2025-12-23T02:26:09.1972015Z branch 'main' set up to track 'origin/main'.
+build-and-deploy	Checkout	2025-12-23T02:26:09.1977806Z ##[endgroup]
+build-and-deploy	Checkout	2025-12-23T02:26:09.2009633Z [command]/usr/bin/git log -1 --format=%H
+build-and-deploy	Checkout	2025-12-23T02:26:09.2030945Z 9dee7c1997186423d95642894ef994449f23f60e
+build-and-deploy	Setup Pages	﻿2025-12-23T02:26:09.2271304Z ##[group]Run actions/configure-pages@v3
+build-and-deploy	Setup Pages	2025-12-23T02:26:09.2271789Z with:
+build-and-deploy	Setup Pages	2025-12-23T02:26:09.2272300Z   token: ***
+build-and-deploy	Setup Pages	2025-12-23T02:26:09.2272548Z   enablement: false
+build-and-deploy	Setup Pages	2025-12-23T02:26:09.2272802Z ##[endgroup]
+build-and-deploy	Setup Node.js	﻿2025-12-23T02:26:09.5967714Z ##[group]Run actions/setup-node@v4
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5968048Z with:
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5968252Z   node-version: 20
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5968466Z   cache: npm
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5968664Z   always-auth: false
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5968890Z   check-latest: false
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5969246Z   token: ***
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5969451Z env:
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5969640Z   GITHUB_PAGES: true
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.5969864Z ##[endgroup]
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.7720790Z Found in cache @ /opt/hostedtoolcache/node/20.19.6/x64
+build-and-deploy	Setup Node.js	2025-12-23T02:26:09.7727058Z ##[group]Environment details
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.1928746Z node: v20.19.6
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.1929294Z npm: 10.8.2
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.1930980Z yarn: 1.22.22
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.1932134Z ##[endgroup]
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.1956734Z [command]/opt/hostedtoolcache/node/20.19.6/x64/bin/npm config get cache
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.3334738Z /home/runner/.npm
+build-and-deploy	Setup Node.js	2025-12-23T02:26:10.6446478Z npm cache is not found
+build-and-deploy	Install dependencies	﻿2025-12-23T02:26:10.6557212Z ##[group]Run npm ci
+build-and-deploy	Install dependencies	2025-12-23T02:26:10.6557521Z [36;1mnpm ci[0m
+build-and-deploy	Install dependencies	2025-12-23T02:26:10.6602141Z shell: /usr/bin/bash -e {0}
+build-and-deploy	Install dependencies	2025-12-23T02:26:10.6602402Z env:
+build-and-deploy	Install dependencies	2025-12-23T02:26:10.6602569Z   GITHUB_PAGES: true
+build-and-deploy	Install dependencies	2025-12-23T02:26:10.6602763Z ##[endgroup]
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2478621Z 
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2487091Z added 86 packages, and audited 87 packages in 3s
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2488027Z 
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2488442Z 16 packages are looking for funding
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2489102Z   run `npm fund` for details
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2493153Z 
+build-and-deploy	Install dependencies	2025-12-23T02:26:13.2494957Z found 0 vulnerabilities
+build-and-deploy	Build	﻿2025-12-23T02:26:13.2725769Z ##[group]Run npm run build
+build-and-deploy	Build	2025-12-23T02:26:13.2726068Z [36;1mnpm run build[0m
+build-and-deploy	Build	2025-12-23T02:26:13.2758824Z shell: /usr/bin/bash -e {0}
+build-and-deploy	Build	2025-12-23T02:26:13.2759077Z env:
+build-and-deploy	Build	2025-12-23T02:26:13.2759239Z   GITHUB_PAGES: true
+build-and-deploy	Build	2025-12-23T02:26:13.2759430Z ##[endgroup]
+build-and-deploy	Build	2025-12-23T02:26:13.3857723Z 
+build-and-deploy	Build	2025-12-23T02:26:13.3858394Z > sjoo.github.io@1.0.0 build
+build-and-deploy	Build	2025-12-23T02:26:13.3858957Z > vite build
+build-and-deploy	Build	2025-12-23T02:26:13.3859189Z 
+build-and-deploy	Build	2025-12-23T02:26:13.6605163Z [36mvite v7.3.0 [32mbuilding client environment for production...[36m[39m
+build-and-deploy	Build	2025-12-23T02:26:13.9850821Z transforming...
+build-and-deploy	Build	2025-12-23T02:26:15.7601012Z [32m✓[39m 30 modules transformed.
+build-and-deploy	Build	2025-12-23T02:26:15.9882221Z rendering chunks...
+build-and-deploy	Build	2025-12-23T02:26:15.9957399Z computing gzip size...
+build-and-deploy	Build	2025-12-23T02:26:16.0118754Z [2mdist/[22m[32mindex.html                 [39m[1m[2m 29.79 kB[22m[1m[22m[2m │ gzip:   7.84 kB[22m
+build-and-deploy	Build	2025-12-23T02:26:16.0120696Z [2mdist/[22m[2massets/[22m[35mindex-BeMONKZk.css  [39m[1m[2m  6.52 kB[22m[1m[22m[2m │ gzip:   1.47 kB[22m
+build-and-deploy	Build	2025-12-23T02:26:16.0121964Z [33m
+build-and-deploy	Build	2025-12-23T02:26:16.0122621Z (!) Some chunks are larger than 500 kB after minification. Consider:
+build-and-deploy	Build	2025-12-23T02:26:16.0123537Z - Using dynamic import() to code-split the application
+build-and-deploy	Build	2025-12-23T02:26:16.0125014Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+build-and-deploy	Build	2025-12-23T02:26:16.0126174Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+build-and-deploy	Build	2025-12-23T02:26:16.0127301Z [2mdist/[22m[2massets/[22m[36mindex-CBloIPA4.js   [39m[1m[33m613.96 kB[39m[22m[2m │ gzip: 166.12 kB[22m
+build-and-deploy	Build	2025-12-23T02:26:16.0127855Z [32m✓ built in 2.33s[39m
+build-and-deploy	Upload artifact for GitHub Pages	﻿2025-12-23T02:26:16.0539142Z ##[group]Run actions/upload-pages-artifact@v3
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0539461Z with:
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0539627Z   path: dist
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0539804Z   name: github-pages
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0539990Z   retention-days: 1
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0540163Z env:
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0540312Z   GITHUB_PAGES: true
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0540490Z ##[endgroup]
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0610627Z ##[group]Run echo ::group::Archive artifact
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0611146Z [36;1mecho ::group::Archive artifact[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0611451Z [36;1mtar \[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0611690Z [36;1m  --dereference --hard-dereference \[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0611971Z [36;1m  --directory "$INPUT_PATH" \[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0612229Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0612479Z [36;1m  --exclude=.git \[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0612689Z [36;1m  --exclude=.github \[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0612895Z [36;1m  .[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.0613068Z [36;1mecho ::endgroup::[0m
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1333813Z shell: /usr/bin/sh -e {0}
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1334167Z env:
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1334377Z   GITHUB_PAGES: true
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1334610Z   INPUT_PATH: dist
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1334827Z ##[endgroup]
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1401840Z ##[group]Archive artifact
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1414571Z ./
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1414877Z ./index.html
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1415218Z ./assets/
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1415612Z ./assets/index-BeMONKZk.css
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1416021Z ./assets/index-CBloIPA4.js
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1423389Z ##[endgroup]
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1498443Z ##[group]Run actions/upload-artifact@v4
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1498699Z with:
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1498863Z   name: github-pages
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1499087Z   path: /home/runner/work/_temp/artifact.tar
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1499340Z   retention-days: 1
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1499531Z   if-no-files-found: error
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1499736Z   compression-level: 6
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1499920Z   overwrite: false
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1500108Z   include-hidden-files: false
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1500320Z env:
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1500474Z   GITHUB_PAGES: true
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.1500644Z ##[endgroup]
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.3634034Z With the provided path, there will be 1 file uploaded
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.3639141Z Artifact name is valid!
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.3640347Z Root directory input is valid!
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:16.6398560Z Beginning upload of artifact content to blob storage
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.2064087Z Uploaded bytes 175545
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.2919301Z Finished uploading artifact content to blob storage!
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.2922625Z SHA256 digest of uploaded artifact zip is 2e31fb955fa06012b49b357955b2c8a0ce1c480835415f68df96d42eab3a1632
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.2923723Z Finalizing artifact upload
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.4467911Z Artifact github-pages.zip successfully finalized. Artifact ID 4949217342
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.4469212Z Artifact github-pages has been successfully uploaded! Final size is 175545 bytes. Artifact ID is 4949217342
+build-and-deploy	Upload artifact for GitHub Pages	2025-12-23T02:26:17.4470754Z Artifact download URL: https://github.com/sjoohg/sjoohg.github.io/actions/runs/20449544883/artifacts/4949217342
+build-and-deploy	Deploy to GitHub Pages	﻿2025-12-23T02:26:17.4664572Z ##[group]Run actions/deploy-pages@v4
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4664844Z with:
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4665139Z   token: ***
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4665320Z   timeout: 600000
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4665505Z   error_count: 10
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4665692Z   reporting_interval: 5000
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4665914Z   artifact_name: github-pages
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4666139Z   preview: false
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4666479Z env:
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4666640Z   GITHUB_PAGES: true
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.4666843Z ##[endgroup]
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:17.9581188Z Fetching artifact metadata for "github-pages" in this workflow run
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2102385Z Found 1 artifact(s)
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2116675Z Creating Pages deployment with payload:
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2117220Z {
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2117557Z 	"artifact_id": 4949217342,
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2118209Z 	"pages_build_version": "9dee7c1997186423d95642894ef994449f23f60e",
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2181962Z 	"oidc_token": "***"
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.2182382Z }
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.4690909Z ##[error]Creating Pages deployment failed
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.4709309Z ##[error]HttpError: Missing environment. Ensure your workflow's deployment job has an environment. Example:
+build-and-deploy	Deploy to GitHub Pages	jobs:
+build-and-deploy	Deploy to GitHub Pages	  deploy:
+build-and-deploy	Deploy to GitHub Pages	    environment:
+build-and-deploy	Deploy to GitHub Pages	      name: github-pages
+build-and-deploy	Deploy to GitHub Pages	
+build-and-deploy	Deploy to GitHub Pages	    at /home/runner/work/_actions/actions/deploy-pages/v4/node_modules/@octokit/request/dist-node/index.js:124:1
+build-and-deploy	Deploy to GitHub Pages	    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+build-and-deploy	Deploy to GitHub Pages	    at createPagesDeployment (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/api-client.js:125:1)
+build-and-deploy	Deploy to GitHub Pages	    at Deployment.create (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/deployment.js:74:1)
+build-and-deploy	Deploy to GitHub Pages	    at main (/home/runner/work/_actions/actions/deploy-pages/v4/src/index.js:30:1)
+build-and-deploy	Deploy to GitHub Pages	2025-12-23T02:26:18.4718222Z ##[error]Error: Failed to create deployment (status: 400) with build version 9dee7c1997186423d95642894ef994449f23f60e. Request ID 9818:1E360D:2592805:267371A:6949FDCA Responded with: Missing environment. Ensure your workflow's deployment job has an environment. Example:
+build-and-deploy	Deploy to GitHub Pages	jobs:
+build-and-deploy	Deploy to GitHub Pages	  deploy:
+build-and-deploy	Deploy to GitHub Pages	    environment:
+build-and-deploy	Deploy to GitHub Pages	      name: github-pages
+build-and-deploy	Deploy to GitHub Pages	
+build-and-deploy	Post Checkout	﻿2025-12-23T02:26:18.5536750Z Post job cleanup.
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6464429Z [command]/usr/bin/git version
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6500723Z git version 2.52.0
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6541962Z Temporarily overriding HOME='/home/runner/work/_temp/1abcbd49-21c2-4147-888c-19ed9f4ca8e0' before making global git config changes
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6543023Z Adding repository directory to the temporary git global config as a safe directory
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6554058Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sjoohg.github.io/sjoohg.github.io
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6587400Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6619084Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6846716Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6866677Z http.https://github.com/.extraheader
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6878896Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.6907938Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.7123950Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-deploy	Post Checkout	2025-12-23T02:26:18.7152843Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-deploy	Complete job	﻿2025-12-23T02:26:18.7474588Z Cleaning up orphan processes
