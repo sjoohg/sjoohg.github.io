@@ -1,43 +1,6 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
-import * as THREE from 'three';
-// Fix import error by specifying .js extension
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
-const COLOR_PALETTE = [
-    { name: 'Dark', hex: '#111827' },
-    { name: 'Gray', hex: '#6b7280' },
-    { name: 'White', hex: '#ffffff' },
-    { name: 'Red', hex: '#ef4444' },
-    { name: 'Orange', hex: '#f97316' },
-    { name: 'Yellow', hex: '#eab308' },
-    { name: 'Green', hex: '#22c55e' },
-    { name: 'Blue', hex: '#3b82f6' },
-];
-
-export default function App() {
-    const mountRef = useRef(null);
-    const svgRef = useRef(null);
-    
-    // State management
-    const [h, setH] = useState(1);
-    const [k, setK] = useState(1);
-    const [l, setL] = useState(1);
-    const [offset, setOffset] = useState(0);
-    const [opacity, setOpacity] = useState(0.5);
-    const [showBonds, setShowBonds] = useState(true);
-    const [showGrid, setShowGrid] = useState(true);
-    const [showAxis, setShowAxis] = useState(true);
-    const [show2D, setShow2D] = useState(true);
-    const [showBelowOnly, setShowBelowOnly] = useState(false);
-    const [structureSize, setStructureSize] = useState(4); // 4x4x4
-    const [atomSize, setAtomSize] = useState(5); // Atom radius
-    const [showPanel, setShowPanel] = useState(true); // Panel toggle
-    
-    // Toast message state for Android UX
-    const [toastMessage, setToastMessage] = useState(null);
-
-    // Color settings state
-    const [bgColor, setBgColor] = useState(COLOR_PALETTE[0].hex); // Default: Dark
+// Archived legacy prototype: replaced by Vite + src/App.jsx
+// Original code moved to src/App.jsx. This file is left as a placeholder to avoid accidental inlining.
+export default null;
     const [atomColor, setAtomColor] = useState(COLOR_PALETTE[2].hex); // Default: White
     const [bondColor, setBondColor] = useState(COLOR_PALETTE[1].hex); // Default: Gray
     const [planeColor, setPlaneColor] = useState(COLOR_PALETTE[7].hex); // Default: Blue
