@@ -489,6 +489,99 @@ export default function App() {
             <div className="relative flex-grow h-full" style={{ touchAction: 'none' }}>
                 <div ref={mountRef} className="w-full h-full cursor-move" />
             </div>
+
+            {/* Control Panel */}
+            {showPanel && (
+                <aside className="absolute right-2 top-2 w-80 max-w-full bg-gray-800/90 backdrop-blur-md p-4 rounded-lg border border-gray-700 text-sm z-40">
+                    <div className="flex items-center justify-between mb-3">
+                        <h3 className="font-semibold text-gray-200">Controls</h3>
+                        <div className="flex gap-2">
+                            <button onClick={handleSave3D} className="px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded">Save 3D</button>
+                            <button onClick={handleSave2D} className="px-2 py-1 bg-green-600 hover:bg-green-700 rounded">Save 2D</button>
+                        </div>
+                    </div>
+
+                    <div className="mb-4">
+                        <h4 className="text-xs text-gray-300 font-medium mb-2">Plane Options</h4>
+                        <div className="mb-2">
+                            <div className="flex justify-between text-xs text-gray-400 mb-1"><span>Offset</span><span>{offset}</span></div>
+                            <input type="range" min="-20" max="20" step="0.5" value={offset} onChange={(e)=>setOffset(Number(e.target.value))} className="w-full" />
+                        </div>
+                        <div>
+                            <div className="flex justify-between text-xs text-gray-400 mb-1"><span>Opacity</span><span>{Math.round(opacity*100)}%</span></div>
+                            <input type="range" min="0" max="1" step="0.1" value={opacity} onChange={(e)=>setOpacity(Number(e.target.value))} className="w-full" />
+                        </div>
+                    </div>
+
+                    <div className="mb-4">
+                        <h4 className="text-xs text-gray-300 font-medium mb-2">Color Options</h4>
+                        <div className="flex justify-around items-center">
+                            <div className="flex flex-col items-center cursor-pointer" onClick={()=>setActiveColorPicker(activeColorPicker==='atom'?null:'atom')}>
+                                <span className="text-xs text-gray-400 mb-1">Atom</span>
+                                <div className="w-8 h-8 rounded-full border-2 border-gray-500 shadow-md" style={{backgroundColor: atomColor}}/>
+                            </div>
+                            <div className="flex flex-col items-center cursor-pointer" onClick={()=>setActiveColorPicker(activeColorPicker==='bond'?null:'bond')}>
+                                <span className="text-xs text-gray-400 mb-1">Bond</span>
+                                <div className="w-8 h-8 rounded-full border-2 border-gray-500 shadow-md" style={{backgroundColor: bondColor}}/>
+                            </div>
+                            <div className="flex flex-col items-center cursor-pointer" onClick={()=>setActiveColorPicker(activeColorPicker==='plane'?null:'plane')}>
+                                <span className="text-xs text-gray-400 mb-1">Plane</span>
+                                <div className="w-8 h-8 rounded-full border-2 border-gray-500 shadow-md" style={{backgroundColor: planeColor}}/>
+                            </div>
+                            <div className="flex flex-col items-center cursor-pointer" onClick={()=>setActiveColorPicker(activeColorPicker==='bg'?null:'bg')}>
+                                <span className="text-xs text-gray-400 mb-1">BG</span>
+                                <div className="w-8 h-8 rounded-full border-2 border-gray-500 shadow-md" style={{backgroundColor: bgColor}}/>
+                            </div>
+                        </div>
+
+                        {activeColorPicker && (
+                            <div className="bg-gray-700 p-2 rounded mt-2 border border-gray-600">
+                                <div className="text-xs text-center text-blue-300 mb-2 font-bold">Select Color</div>
+                                <div className="grid grid-cols-4 gap-2 place-items-center">
+                                    {COLOR_PALETTE.map(c => (
+                                        <button key={c.hex} onClick={()=>{ if(activeColorPicker==='atom') setAtomColor(c.hex); else if(activeColorPicker==='bond') setBondColor(c.hex); else if(activeColorPicker==='plane') setPlaneColor(c.hex); else if(activeColorPicker==='bg') setBgColor(c.hex); setActiveColorPicker(null); }} className="w-8 h-8 rounded-full border border-gray-500 hover:scale-110 transition-transform shadow-sm" style={{backgroundColor:c.hex}} title={c.name} />
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="mb-4">
+                        <h4 className="text-xs text-gray-300 font-medium mb-2">Misc. Options</h4>
+                        <div className="flex flex-col space-y-2 text-xs">
+                            <label className="flex items-center"><input type="checkbox" checked={showBonds} onChange={(e)=>setShowBonds(e.target.checked)} className="mr-2"/>Show Bonds</label>
+                            <label className="flex items-center"><input type="checkbox" checked={showGrid} onChange={(e)=>setShowGrid(e.target.checked)} className="mr-2"/>Show Grid</label>
+                            <label className="flex items-center"><input type="checkbox" checked={showAxis} onChange={(e)=>setShowAxis(e.target.checked)} className="mr-2"/>Show Axis</label>
+                            <label className="flex items-center"><input type="checkbox" checked={showBelowOnly} onChange={(e)=>setShowBelowOnly(e.target.checked)} className="mr-2"/>Show Below Only</label>
+                            <label className="flex items-center"><input type="checkbox" checked={show2D} onChange={(e)=>setShow2D(e.target.checked)} className="mr-2"/>Show 2D View</label>
+                        </div>
+                        <div className="mt-3">
+                            <div className="flex justify-between text-xs text-gray-400 mb-1"><span>Structure Size</span><span>{structureSize}x{structureSize}x{structureSize}</span></div>
+                            <input type="range" min="2" max="6" step="1" value={structureSize} onChange={(e)=>setStructureSize(Number(e.target.value))} className="w-full" />
+                        </div>
+                        <div className="mt-2">
+                            <div className="flex justify-between text-xs text-gray-400 mb-1"><span>Atom Size</span><span>{atomSize}</span></div>
+                            <input type="range" min="3" max="10" step="0.5" value={atomSize} onChange={(e)=>setAtomSize(Number(e.target.value))} className="w-full" />
+                        </div>
+                    </div>
+
+                    <button onClick={()=>{ setH(1); setK(1); setL(1); setOffset(0); if(controlsRef.current) controlsRef.current.reset(); }} className="w-full py-2 bg-red-600 hover:bg-red-700 rounded text-white font-bold">Reset View</button>
+                </aside>
+            )}
+
+            {/* 2D Floating Window */}
+            {show2D && (
+                <div ref={svgRef} onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} style={{ left: windowPos.x, top: windowPos.y }} className="absolute z-30 p-2 bg-gray-800/90 border border-gray-700 rounded-lg w-80 h-80 touch-none cursor-grab" >
+                    <svg width="100%" height="100%" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
+                        <rect width="100%" height="100%" fill={bgColor} />
+                        <g transform="translate(400 400) scale(1 -1)">
+                            {atoms2D.map(a => (
+                                <circle key={a.id} cx={a.u} cy={a.v} r={a.r} fill={atomColor} fillOpacity={a.opacity} stroke="none" />
+                            ))}
+                        </g>
+                    </svg>
+                </div>
+            )}
         </div>
     );
 }
